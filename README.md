@@ -1,6 +1,7 @@
 CANCER CLASSIFIER BASED ON RAMAN SPECTRA OF EXOSOMES
 USING PCA-LDA
 Workflow Overview
+
 **1. PCA Dimensionality Reduction**
 - It is an unsupervised machine learning algorithm that identifies a smaller set of features (principal components), which are linear combinations of the original features. 
 These components capture the majority of the variance in the dataset.
@@ -10,12 +11,15 @@ Output: Scatterplot of the spectra along 2 Principal Components
         Explained and Cumulative Variance Plot
         3D PCA plot 
         Loadings plot for n PCs
-**2. PCA Feature Extraction
-**- The weighted sum of loadings for each wavenumber is obtained by multiplying the absolute loading of each wavenumber by the explained 
+  
+**2. PCA Feature Extraction**
+- The weighted sum of loadings for each wavenumber is obtained by multiplying the absolute loading of each wavenumber by the explained 
 variance of the corresponding PC and adding these values across all selected PCs.
 - The top n% of wavenumbers, based on the weighted sum of loadings, are identified as the most relevant features for subsequent analyses.
 Input: Percentage of wavenumbers to be extracted
 Output: List of top n% of wavenumbers
+
+
 **3. Spectral Similarity Analysis**
 -  Perform Min-Max normalization first of exosome and lipid spectra.
 -  For each lipid spectrum, mean squared error, cosine similarity, and cross-correlation coefficient are calculated with the exosome spectra 
@@ -24,6 +28,7 @@ only at the wavenumbers identified by PCA Feature Extraction.
 Input: Exosome Spectra File Path
        Lipid Spectra File Path
 Output: Ranked Similarity scores for each lipid subtype
+
 **4. PCA-LDA for Cancer Type Classification**
 - LDA is a supervised machine learning algorithm that optimizes class separation by finding the linear combination (Linear Discriminants or LDs) 
 of PCA extracted features that maximizes between-class variance while minimizing within-class variance.
