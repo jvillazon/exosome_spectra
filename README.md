@@ -52,9 +52,6 @@ Output:Scatterplot of test set data
 
 Code authors: Jorge Villazon and Nathaniel Dela Cruz
 
+https://pubs.acs.org/doi/10.1021/acs.analchem.4c06966
 
 
-
-
-
-Shift + Enter to add a new line
